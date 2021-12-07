@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8dcc371a-2fe5-4bae-9bc0-bd0d7d065661": {
+      "ProjectGuid": "8dcc371a-2fe5-4bae-9bc0-bd0d7d065661",
+      "DisplayName": "DevIO.UI.Site",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
