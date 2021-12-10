@@ -1,5 +1,6 @@
 ﻿using DevIO.UI.Site.Data;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.EntityFrameworkCore;
 
 namespace DevIO.UI.Site
 {
@@ -23,6 +24,9 @@ namespace DevIO.UI.Site
                 options.AreaViewLocationFormats.Add("/Modulos/{2}/Views/Shared/{0}.cshtml");
                 options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
             });
+
+            services.AddDbContext<MeuDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("MeuDbContext")));
 
             services.AddControllersWithViews();
             services.AddTransient<IPedidoRepository, PedidoRepository>();
